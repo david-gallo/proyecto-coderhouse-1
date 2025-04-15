@@ -1,9 +1,10 @@
+/* Reset y estilos base */
 * {
-    margin: 0px;
-    padding: 0px;
-    font-family: Scheherazade New;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Scheherazade New', serif;
     font-size: 19px;
-
 }
 
 .grid {
@@ -14,31 +15,28 @@
     background-size: cover;
 }
 
-/* menu de navegacion */
-
+/* Menú de navegación */
 .menu {
-    padding: 0px;
+    padding: 0;
     grid-area: 1 / 1 / 2 / 5;
     background-color: #f0f8ff;
-
 }
 
 .dg__navbar {
     border-bottom: 1px solid black;
-
 }
 
 .logo {
     max-height: 250px;
+    height: auto;
 }
 
-/* carousel de imagenes */
-
+/* Carrusel de imágenes */
 .dg__carousel {
-
     grid-area: 2 / 2 / 3 / 4;
     width: 100%;
-    place-self: center
+    align-self: center;
+    justify-self: center;
 }
 
 .dg__carousel-posicion {
@@ -48,17 +46,13 @@
     z-index: 2;
     display: flex;
     justify-content: center;
-    padding: 0;
-    margin-right: 15%;
+    margin: 0 15%;
     margin-bottom: 1rem;
-    margin-left: 15%;
 }
 
-/* ultimos añadidos */
-
+/* Últimos añadidos */
 .dg__card {
     grid-area: 3 / 1 / 4 / 5;
-
 }
 
 .dg__card__img {
@@ -70,9 +64,23 @@
     display: flex;
 }
 
-/* pie de pagina */
+/* Pie de página */
 .footer {
-
     grid-area: 4 / 1 / 5 / 5;
+    background-color: #f8f8f8;
+    padding: 1rem;
+}
 
+/* Responsivo */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .dg__carousel,
+    .dg__card,
+    .footer {
+        grid-area: auto;
+    }
 }

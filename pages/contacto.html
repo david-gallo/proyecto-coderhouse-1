@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="menu">
+        <h1>Recetario De Mamá</h1>
+        <!-- menu de navegaccion -->
+        <div>
+            <input type="text" name="buscador" class="buscador" placeholder=" busca tu receta">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/arroz_con_leche.html">arroz con leche</a></li>
+                <li><a href="../pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    </nav>
+    <h1>pasanos tu receta!</h1>
+    <form action="/submit" method="post">
+        <label for="nombre ">nombre</label>
+        <input type="text" name="nombre" id="nombre" class="datos">
+        <label for="apellido"> apellido</label>
+        <input type="text" name="text" id="text" class="datos">
+        <label for="email">email</label>
+        <input type="email" name="email" id="email" class="datos">
+        <label for="subir_imagen"></label>
+        <h3>mandamos tus recetas!</h3>
+        <label for="comentarios"></label>
+        <input type="text" name="comentarios" id="comentarios" class="comentarios">
+        <button type="submit">enviar</button>
+    </form>
+    <footer>
+        <p>¡Nuestras redes!</p>
+        <a href=""><img src="../files/redes/facebook.png" alt="facebook" height="50" width="50"></a>
+        <a href=""><img src="../files/redes/instagram.webp" alt="instagram" height="50" width="50"></a>
+        <a href=""><img src="../files/redes/X.jpg" alt="X" height="50" width="50"></a>
+    </footer>
+
+</body>
+
+</html>

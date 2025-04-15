@@ -1,0 +1,78 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Scheherazade New;
+    font-size: 19px;
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.2fr repeat(2, 1fr) 0.3fr;
+    background-image: url(./files/fondos/fondo-pagina.webp);
+    background-size: cover;
+}
+
+/* menu de navegacion */
+
+.menu {
+    padding: 0px;
+    grid-area: 1 / 1 / 2 / 5;
+    background-color: #f0f8ff;
+
+}
+
+.dg__navbar {
+    border-bottom: 1px solid black;
+
+}
+
+.logo {
+    max-height: 250px;
+}
+
+/* carousel de imagenes */
+
+.dg__carousel {
+
+    grid-area: 2 / 2 / 3 / 4;
+    width: 100%;
+    place-self: center
+}
+
+.dg__carousel-posicion {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 15%;
+    margin-bottom: 1rem;
+    margin-left: 15%;
+}
+
+/* ultimos añadidos */
+
+.dg__card {
+    grid-area: 3 / 1 / 4 / 5;
+
+}
+
+.dg__card__img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.dg__card__contenido {
+    display: flex;
+}
+
+/* pie de pagina */
+.footer {
+
+    grid-area: 4 / 1 / 5 / 5;
+
+}

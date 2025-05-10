@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 0.2fr repeat(2, 1fr) auto;
-    background-image: url('/files/fondos/fondo-pagina.webp');
+    background-image: url('./files/fondos/fondo-pagina.webp');
     background-size: cover;
 
     .menu {

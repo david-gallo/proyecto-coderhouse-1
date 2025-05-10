@@ -1,0 +1,283 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Scheherazade New", serif;
+  font-size: 19px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.2fr repeat(2, 1fr) auto;
+  background-image: url("/files/fondos/fondo-pagina.webp");
+  background-size: cover;
+}
+.grid .menu {
+  padding: 0;
+  grid-area: 1/1/2/5;
+  background-color: #f0f8ff;
+  background: linear-gradient(to bottom, #212529, rgba(248, 248, 248, 0));
+}
+.grid .menu .dg__navbar .logo {
+  max-height: 150px;
+  height: auto;
+  padding: 0;
+  margin: 20px 5px 5px 30px;
+  border-radius: 50%;
+}
+
+.dg__navbar .navbar-nav {
+  flex: 1;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.boton_card:hover {
+  -webkit-text-decoration: #fff;
+          text-decoration: #fff;
+}
+
+.boton_card-text {
+  text-decoration: blink;
+  color: rgb(25, 135, 84);
+}
+
+.titulo-cards {
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px 0;
+  color: #000;
+  text-shadow: #000 5px 5px 15px;
+}
+
+.dg__navbar .nav-link {
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+  color: #f0f8ff;
+}
+
+.dg__navbar .nav-link:hover {
+  transform: scale(1.1);
+  color: #000;
+}
+
+.dg__carousel {
+  grid-area: 2/2/3/4;
+  position: relative;
+  overflow: hidden;
+  box-shadow: #000000 0px 0px 10px;
+  background: radial-gradient(circle, #212529, rgba(248, 248, 248, 0));
+}
+.dg__carousel .dg__carousel {
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+  height: 400px;
+  position: relative;
+}
+.dg__carousel .carousel-container {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  position: relative;
+  transition: transform 1s ease;
+}
+.dg__carousel .carousel-track {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  animation: scrollCarousel 15s infinite linear;
+  transition: transform 0.5s ease;
+}
+.dg__carousel .carousel-track img {
+  height: 100%;
+  flex: 0 0 auto;
+  width: 80vw;
+  margin: 0 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.dg__carousel .carousel-track img:hover {
+  transform: scale(1.05);
+}
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-80vw);
+  }
+  50% {
+    transform: translateX(-160vw);
+  }
+  75% {
+    transform: translateX(-240vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.items-menu:hover {
+  color: red;
+}
+
+.card {
+  box-shadow: #000000 0px 0px 10px;
+}
+
+:hover.card {
+  scale: 1.1;
+  box-shadow: #000000 0px 0px 20px;
+}
+
+.dg__card {
+  grid-area: 3/1/4/5;
+}
+.dg__card .dg__card__img {
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.grid__arroz-con-leche {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.2fr repeat(2, 1fr) auto;
+  background-image: url(./files/fondos/fondo-pagina.webp);
+  background-size: cover;
+}
+.grid__arroz-con-leche .menu {
+  padding: 0;
+  grid-area: 1/1/2/5;
+  background-color: #f0f8ff;
+}
+.grid__arroz-con-leche .ingredientes {
+  grid-area: 3/1/4/3;
+}
+.grid__arroz-con-leche .todos_los_pasos {
+  grid-area: 3/3/4/5;
+}
+.grid__arroz-con-leche .todos_los_pasos .accordion-collapse {
+  position: absolute;
+  z-index: 1000;
+  background: white;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 700px;
+  overflow-y: auto;
+}
+.grid__arroz-con-leche .todos_los_pasos .accordion-item {
+  position: relative;
+}
+.grid__arroz-con-leche .img-arroz-con-leche {
+  display: flex;
+  justify-content: center;
+  grid-area: 2/1/3/3;
+}
+.grid__arroz-con-leche .card-kcal-desc {
+  grid-area: 2/3/3/5;
+}
+.grid__arroz-con-leche .card-kcal-desc .card__descripcion {
+  margin: auto;
+  margin-top: 38px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  font-style: italic;
+  padding: 15px;
+  max-width: 100%;
+  font-size: 1rem;
+}
+
+.back {
+  background-image: url(./files/fondos/fondo-pagina.webp);
+  background-size: cover;
+}
+
+.footer {
+  grid-area: 4/1/5/5;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  background: linear-gradient(to top, #212529, rgba(248, 248, 248, 0));
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.2fr auto auto 0.3fr;
+  }
+  .dg__carousel {
+    margin: 15% 0;
+    grid-area: 2/1/2/3;
+  }
+  .grid__arroz-con-leche {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, auto);
+  }
+  .menu__arroz-con-leche {
+    grid-area: 1/1/2/3;
+  }
+  .img-arroz-con-leche {
+    grid-area: 2/1/3/3;
+  }
+  .card_recetas {
+    grid-area: 3/1/5/3;
+  }
+  .card__descripcion {
+    padding: 20px;
+  }
+  .card-kcal-desc {
+    grid-area: 3/1/3/5;
+  }
+  .ingredientes {
+    grid-area: 4/1/4/3;
+  }
+  .todos_los_pasos {
+    grid-area: 5/1/5/3;
+  }
+  .footer {
+    grid-area: 8/1/9/3;
+  }
+}
+/* Responsive: móviles */
+@media (max-width: 425px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr auto auto 0.3fr;
+  }
+  .dg__carousel {
+    margin: 15% 0;
+    grid-area: 2/1/2/2;
+  }
+  .grid__arroz-con-leche {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, auto);
+  }
+  .menu__arroz-con-leche {
+    grid-area: 1/1/2/2;
+  }
+  .img-arroz-con-leche {
+    grid-area: 2/1/4/2;
+  }
+  .card_recetas {
+    grid-area: 4/1/5/2;
+  }
+  .card-kcal-desc {
+    grid-area: 5/1/7/2;
+  }
+  .ingredientes {
+    grid-area: 7/1/8/2;
+  }
+  .todos_los_pasos {
+    grid-area: 8/1/10/2;
+  }
+  .footer {
+    grid-area: 10/1/11/2;
+  }
+}/*# sourceMappingURL=style.css.map */

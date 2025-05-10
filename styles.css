@@ -1,0 +1,224 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Scheherazade New', serif;
+    font-size: 19px;
+}
+
+/* Grid general */
+.grid {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.2fr repeat(2, 1fr) auto;
+    background-image: url(./files/fondos/fondo-pagina.webp);
+    background-size: cover;
+
+}
+
+.grid__arroz-con-leche {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.2fr repeat(2, 1fr) auto;
+    background-image: url(./files/fondos/fondo-pagina.webp);
+    background-size: cover;
+
+}
+
+
+.back {
+    background-image: url(./files/fondos/fondo-pagina.webp);
+    background-size: cover;
+}
+
+/* Menú de navegación */
+.menu {
+    padding: 0;
+    grid-area: 1 / 1 / 2 / 5;
+    background-color: #f0f8ff;
+}
+
+.dg__navbar {
+    border-bottom: 1px solid black;
+}
+
+.logo {
+    max-height: 150px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+/* Carrusel */
+.dg__carousel {
+    grid-area: 2 / 2 / 3 / 4;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    padding: 3rem;
+}
+
+
+/* Cards */
+.dg__card {
+    grid-area: 3 / 1 / 4 / 5;
+}
+
+.dg__card__img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Pie de página */
+.footer {
+    grid-area: 4 / 1 / 5 / 5;
+    background-color: #f8f8f8;
+    padding: 1rem;
+}
+
+/* Ingredientes y pasos */
+.ingredientes {
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+.todos_los_pasos {
+    grid-area: 3 / 3 / 4 / 5;
+}
+
+/* Card de receta individual */
+.img-arroz-con-leche {
+    display: flex;
+    justify-content: center;
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+.card-kcal-desc {
+    grid-area: 2 / 3 / 3 / 5;
+}
+
+.card__descripcion {
+
+    margin: auto;
+    margin-top: 38px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    font-style: italic;
+    padding: 15px;
+    max-width: 100%;
+    font-size: 1rem;
+}
+
+/* Acordeón */
+.accordion-collapse {
+    position: absolute;
+    z-index: 1000;
+    background: white;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 700px;
+    overflow-y: auto;
+}
+
+.accordion-item {
+    position: relative;
+}
+
+/* Responsive: tablets */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.2fr auto auto 0.3fr;
+    }
+
+    .dg__carousel {
+        margin: 15% 0;
+        grid-area: 2 / 1 / 2 / 3;
+    }
+
+    .grid__arroz-con-leche {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, auto);
+    }
+
+    .menu__arroz-con-leche {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .img-arroz-con-leche {
+        grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .card_recetas {
+        grid-area: 3 / 1 / 5 / 3;
+    }
+
+    .card__descripcion {
+        padding: 20px;
+    }
+
+    .card-kcal-desc {
+
+        grid-area: 3 / 1 / 3 / 5;
+    }
+
+    .ingredientes {
+        grid-area: 4 / 1 / 4 / 3;
+    }
+
+    .todos_los_pasos {
+        grid-area: 5 / 1 / 5 / 3;
+    }
+
+    .footer {
+        grid-area: 8 / 1 / 9 / 3;
+    }
+}
+
+/* Responsive: móviles */
+@media (max-width: 425px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr auto auto 0.3fr;
+    }
+
+    .dg__carousel {
+        margin: 15% 0;
+        grid-area: 2 / 1 / 2 / 2;
+    }
+
+    .grid__arroz-con-leche {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10, auto);
+    }
+
+    .menu__arroz-con-leche {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .img-arroz-con-leche {
+        grid-area: 2 / 1 / 4 / 2;
+    }
+
+    .card_recetas {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    .card-kcal-desc {
+        grid-area: 5 / 1 / 7 / 2;
+    }
+
+    .ingredientes {
+        grid-area: 7 / 1 / 8 / 2;
+    }
+
+    .todos_los_pasos {
+        grid-area: 8 / 1 / 10 / 2;
+    }
+
+    .footer {
+        grid-area: 10 / 1 / 11 / 2;
+    }
+}

@@ -10,14 +10,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/main.css">
 </head>
 
 <body>
-    <div class="back">
+    <div class="grid">
         <!-- Menú de navegación -->
-        <nav class="navbar navbar-expand-lg menu__arroz-con-leche p-0" aria-label="Menú principal">
+        <nav class="navbar navbar-expand-lg menu p-0" aria-label="Menú principal">
             <div class="container-fluid p-0 p-left-1 m-0 dg__navbar">
                 <a class="navbar-brand p-0 m-0 img-fluid" href="#">
                     <img src="../files/fondos/logo.png" alt="logo Recetario de Mamá" class="logo">
@@ -29,10 +30,10 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex justify-content-around mx-auto mb-2 mb-lg-0" role="menubar">
-                        <li class="nav-item" role="none">
-                            <a class="nav-link active" aria-current="page" href="../index.html"
+                        <li role="none">
+                            <a class=" items-menu nav-link " aria-current="page" href="../index.html"
                                 role="menuitem">Inicio</a>
                         </li>
 
@@ -42,72 +43,71 @@
                                 Últimos añadidos
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a class="dropdown-item" href="../pages/arroz_con_leche.html" role="menuitem">Arroz
+                                <li><a class="dropdown-item" href="./pages/arroz_con_leche.html" role="menuitem">Arroz
                                         con leche</a></li>
                             </ul>
                         </li>
 
                         <li class="nav-item" role="none">
-                            <a class="nav-link" href="../pages/contacto.html" role="menuitem">Contacto</a>
+                            <a class="nav-link" href="./pages/contacto.html" role="menuitem">Manda su receta!</a>
                         </li>
                     </ul>
 
-                    <form class="d-flex" role="search" aria-label="Buscar en el sitio">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
+
                 </div>
             </div>
         </nav>
 
-        <form class="p-4" enctype="multipart/form-data">
+        <form class="p-4 contacto" enctype="multipart/form-data">
             <div class="mb-3">
-                <label for="nombre" class="form-label">Tu nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ej: María Pérez" required>
+                <label for="nombre" class="form-label nombre">Tu nombre</label>
+                <input type="text" class="form-control nombre" id="nombre" placeholder="Ej: María Pérez" required>
             </div>
 
             <div class="mb-3">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+                <label for="email" class="form-label correo">Correo electrónico</label>
+                <input type="email" class="form-control correo" id="email" placeholder="nombre@ejemplo.com" required>
             </div>
 
             <div class="mb-3">
-                <label for="receta" class="form-label">Nombre de la receta</label>
-                <input type="text" class="form-control" id="receta" placeholder="Ej: Tarta de manzana" required>
+                <label for="receta" class="form-label nombre_receta">Nombre de la receta</label>
+                <input type="text" class="form-control nombre_receta" id="receta" placeholder="Ej: Tarta de manzana"
+                    required>
             </div>
 
             <div class="mb-3">
-                <label for="imagen" class="form-label">Subir imagen de la receta</label>
-                <input class="form-control" type="file" id="imagen" accept="image/*" required>
+                <label for="imagen" class="form-label img_subir_receta">Subir imagen de la receta</label>
+                <input class="form-control img_subir_receta" type="file" id="imagen" accept="image/*" required>
             </div>
 
             <div class="mb-3">
-                <label for="calorias" class="form-label">Calorías (opcional)</label>
-                <input type="number" class="form-control" id="calorias" placeholder="Ej: 250">
+                <label for="calorias" class="form-label calorias">Calorías (opcional)</label>
+                <input type="number" class="form-control calorias" id="calorias" placeholder="Ej: 250">
             </div>
 
             <div class="mb-3">
-                <label for="mensaje" class="form-label">Instrucciones o comentario</label>
-                <textarea class="form-control" id="mensaje" rows="4" placeholder="Contanos cómo preparás esta receta..."
-                    required></textarea>
+                <label for="mensaje" class="form-label comentario">Instrucciones o comentario</label>
+                <textarea class="form-control comentario" id="mensaje" rows="4"
+                    placeholder="Contanos cómo preparás esta receta..." required></textarea>
             </div>
 
             <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="contacto">
-                <label class="form-check-label" for="contacto">
+                <input class="form-check-input nombre " type="checkbox" id="contacto">
+                <label class="form-check-label nombre" for="contacto">
                     Acepto ser contactado por dudas sobre mi receta
                 </label>
             </div>
 
-            <button type="submit" class="btn btn-success">Enviar receta</button>
+            <button type="submit" class="btn btn-success correo">Enviar receta</button>
         </form>
+
+        <footer class="footer text-center py-4">
+            <p>¡Nuestras redes!</p>
+            <a href="#"><img src="../files/redes/facebook.png" alt="Facebook" height="50" width="50"></a>
+            <a href="#"><img src="../files/redes/instagram.webp" alt="Instagram" height="50" width="50"></a>
+            <a href="#"><img src="../files/redes/X.jpg" alt="Twitter / X" height="50" width="50"></a>
+        </footer>
     </div>
-    <footer class="footer text-center py-4">
-        <p>¡Nuestras redes!</p>
-        <a href="#"><img src="../files/redes/facebook.png" alt="Facebook" height="50" width="50"></a>
-        <a href="#"><img src="../files/redes/instagram.webp" alt="Instagram" height="50" width="50"></a>
-        <a href="#"><img src="../files/redes/X.jpg" alt="Twitter / X" height="50" width="50"></a>
-    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

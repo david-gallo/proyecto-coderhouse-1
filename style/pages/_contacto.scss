@@ -1,0 +1,57 @@
+.contacto {
+    grid-area: 2 / 2/ 3 /4;
+}
+
+.nombre {
+    animation: fadeInleft 1.5s ease forwards;
+}
+
+.correo {
+    animation: fadeInright 1.5s ease forwards;
+}
+
+.nombre_receta {
+    animation: fadeInleft 1.5s ease forwards
+}
+
+.img_subir_receta {
+    animation: fadeInright 1.5s ease forwards
+}
+
+.calorias {
+    animation: fadeInleft 1.5s ease forwards
+}
+
+.comentario {
+    animation: fadeInright 1.5s ease forwards
+}
+
+@keyframes fadeInleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInright {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .contacto {
+        grid-area: 2 / 1 / 3 / 5;
+    }
+}

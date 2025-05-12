@@ -1,0 +1,35 @@
+//grid main//
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.2fr repeat(2, 1fr) auto;
+  background-color: #ffeefc;
+  background-image: url("/files/fondos/fondo-pagina.webp");
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.2fr auto auto 0.3fr;
+  }
+}
+
+@media (max-width: 425px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr auto auto 0.3fr;
+  }
+}
+
+//grid pag recetas//
+.grid__recetas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.2fr repeat(11, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background-color: #ffeefc;
+  background-image: url("/files/fondos/fondo-pagina.webp");
+  background-size: cover;
+}

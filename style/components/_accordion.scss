@@ -1,0 +1,21 @@
+.accordion-collapse {
+  position: absolute;
+  z-index: 1000;
+  background: white;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 700px;
+  overflow-y: auto;
+}
+
+.accordion-item {
+  position: relative;
+}
+
+
+@media screen and (max-width: 768px) {
+  .dg__carousel {
+    grid-area: 2 / 1 / 2 / 3;
+  }
+
+}

@@ -1,0 +1,35 @@
+.menu {
+
+  padding: 0;
+  grid-area: 1/1/2/6;
+  background: linear-gradient(to bottom, #212529, rgba(248, 248, 248, 0));
+  animation: fadeInBottom 0.8s ease forwards;
+}
+
+.dg__navbar .logo {
+  max-height: 150px;
+  height: auto;
+  margin: 20px 5px 5px 30px;
+  border-radius: 50%;
+}
+
+.dg__navbar .navbar-nav {
+  flex: 1;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.dg__navbar .nav-link {
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+  color: #f0f8ff;
+}
+
+.dg__navbar .nav-link:hover {
+  transform: scale(1.1);
+  color: #000;
+}
+
+.items-menu:hover {
+  color: red;
+}

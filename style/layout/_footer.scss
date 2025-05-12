@@ -5,3 +5,13 @@
   background: linear-gradient(to top, #212529, rgba(248, 248, 248, 0));
   animation: fadeInup 0.8s ease forwards;
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    grid-area: 12 / 1 / 13 / 3;
+
+    padding: 0.5rem;
+    animation: fadeInup 0.8s ease forwards;
+  }
+
+}

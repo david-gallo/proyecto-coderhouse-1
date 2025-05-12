@@ -33,3 +33,17 @@
   background-image: url("../style/fondo-pagina.webp");
   background-size: cover;
 }
+
+@media (max-width: 768px) {
+  .grid__recetas {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 0.2fr repeat(11, auto);
+  }
+}
+
+@media (max-width: 425px) {
+  .grid__recetas {
+    grid-template-columns: auto;
+    grid-template-rows: 0.2fr repeat(11, auto);
+  }
+}

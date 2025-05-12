@@ -6,20 +6,17 @@
   --bg-gris: #E0E0E0;
 }
 
+/* Card Recetas */
 .card_recetas {
   grid-area: 2 / 1 / 4 / 5;
   margin: 160px 160px 0px 160px;
-  background: linear-gradient(to bottom right,
-      var(--bg-crema),
-      var(--overlay-rosa));
+  background: linear-gradient(to bottom right, var(--bg-crema), var(--overlay-rosa));
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   animation: fadeInup 0.8s ease forwards;
 }
 
-
 .card_recetas__img {
-
   float: left;
   width: 450px;
   height: 450px;
@@ -31,6 +28,10 @@
   display: block;
   border: 4px solid var(--accent-canela);
   transition: transform 0.3s ease;
+}
+
+.card_recetas__img:hover {
+  transform: scale(1.02);
 }
 
 .card__descripcion-receta {
@@ -46,45 +47,43 @@
 }
 
 .card__descripcion-receta:hover {
-
   background: rgba(212, 163, 115, 0.1);
-  transition: background 0.3s ease
+  transition: background 0.3s ease;
 }
 
-.card_recetas__img:hover {
-  transform: scale(1.02);
-}
-
-
-
-
-
+/* Card Tabla */
 .card_tabla {
   grid-area: 4 / 2 / 7 / 4;
   margin: 2rem 0px 2rem 0px;
   animation: fadeInup 0.8s ease forwards;
-
-
 }
 
+/* Card Ingredientes */
 .card_ingredientes {
   grid-area: 7 / 1 / 12 / 3;
-
   margin-top: 20px;
   animation: fadeInup 0.8s ease forwards;
 }
 
+.card_ingredientes h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--accent-canela);
+}
+
+/* Card Todos los Pasos */
 .card_todos_los_pasos {
   grid-area: 7 / 3 / 12 / 5;
   animation: fadeInup 0.8s ease forwards;
 }
 
+/* Receta Info */
 .receta-info {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-
   max-width: 1200px;
   padding: 0 1rem;
 }
@@ -106,7 +105,6 @@
   background: #000000;
 }
 
-
 .info-card th,
 .info-card td {
   padding: 0.75rem 1rem;
@@ -121,9 +119,9 @@
 
 .info-card tbody tr:nth-child(even) {
   background: rgba(212, 163, 115, 0.1);
-
 }
 
+/* Accordion Card */
 .accordion-card {
   .accordion-header {
     background: var(--bg-crema);
@@ -142,14 +140,7 @@
   }
 }
 
-
-.card_ingredientes h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-family: "Montserrat", sans-serif;
-  color: var(--accent-canela);
-}
-
+/* Animations */
 @keyframes fadeInup {
   0% {
     opacity: 0;
@@ -160,7 +151,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-
 }
 
 @keyframes fadeInBottom {
@@ -173,5 +163,86 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
 
+/* Media Queries */
+@media (max-width: 768px) {
+  .card_recetas {
+    grid-area: 2 / 1 / 5 / 3;
+    margin: 2rem 0;
+    animation: fadeInup 0.8s ease forwards;
+  }
+
+  .card_recetas__img {
+    float: left;
+    width: 250px;
+    height: 250px;
+    margin: 1rem;
+    border-radius: 50%;
+    shape-outside: circle(50%);
+    clip-path: circle(50%);
+    object-fit: cover;
+    display: block;
+    border: 4px solid var(--accent-canela);
+    transition: transform 0.3s ease;
+  }
+
+  .card_recetas__img:hover {
+    transform: scale(1.02);
+  }
+
+  .card__descripcion-receta {
+    font-family: "Merriweather", serif;
+    font-size: 10px;
+    font-style: italic;
+    line-height: 20px;
+    text-shadow: #000 5px 5px 15px;
+    background: var(--bg-crema);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+
+
+  .card_tabla {
+    grid-area: 9 / 1 / 12 / 3;
+
+    animation: fadeInup 0.8s ease forwards;
+  }
+
+  .card_ingredientes {
+    grid-area: 5 / 1 / 7 / 3;
+    margin-top: 20px;
+    animation: fadeInup 0.8s ease forwards;
+  }
+
+  .card_todos_los_pasos {
+    grid-area: 7 / 1 / 9 / 3;
+    animation: fadeInup 0.8s ease forwards;
+  }
+}
+
+@media (max-width: 480px) {
+  .card_recetas {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    grid-area: 2 / 1 / 5 / 2;
+    animation: fadeInup 0.8s ease forwards;
+  }
+
+  .card_recetas__img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    shape-outside: none;
+    clip-path: none;
+  }
+
+  .card_tabla {
+    grid-area: 4 / 1 / 7 / 5;
+    margin: 2rem 0;
+    animation: fadeInup 0.8s ease forwards;
+  }
 }

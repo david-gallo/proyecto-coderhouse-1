@@ -138,7 +138,7 @@ table {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 0.2fr repeat(2, 1fr) auto;
   background-color: #ffeefc;
-  background-image: url("/files/fondos/fondo-pagina.webp");
+  background-image: url("../style/fondo-pagina.webp");
   background-size: cover;
 }
 
@@ -161,7 +161,7 @@ table {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   background-color: #ffeefc;
-  background-image: url("/files/fondos/fondo-pagina.webp");
+  background-image: url("../style/fondo-pagina.webp");
   background-size: cover;
 }
 
